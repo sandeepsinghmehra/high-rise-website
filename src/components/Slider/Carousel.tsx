@@ -19,7 +19,7 @@ const responsive = {
         slidesToSlide: 1 // optional, default to 1.
     },
     mobile: {
-        breakpoint: { max: 767, min: 464 },
+        breakpoint: { max: 767, min: 300 },
         items: 2,
         slidesToSlide: 1 // optional, default to 1.
     }
@@ -88,7 +88,7 @@ const Slider = () => {
             >
             {sliderImageUrl.map((item, index) => {
                 return (
-                    <div style={{overflow: "hidden", padding: '2rem 0'}} key={index}>
+                    <Box sx={{overflow: "hidden", padding: "2rem 0"}} key={index}>
                         <Image 
                             style={{width: '100%', height: '230px'}} 
                             src={item.url} 
@@ -97,7 +97,7 @@ const Slider = () => {
                             height={230}
                             priority
                         />
-                    </div>
+                    </Box>
                 );
             })}
             </Carousel>
