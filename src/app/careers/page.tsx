@@ -1,3 +1,5 @@
+import CareerHero from "@/components/Hero/Careers/Hero";
+import { Typography } from "@mui/material";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +10,7 @@ export const metadata: Metadata = {
 export default function Careers() {
   return (
     <main>
-      hello Careers page
+        <CareerHero image_url={"/assets/Highrise+Logo+color+large.jpg"} />
     </main>
   );
 }

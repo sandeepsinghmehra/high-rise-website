@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Slider from "@/components/Slider/Carousel";
+import HomeAboutCardUI from "@/components/Cards/HomeAboutCardUI/Index";
+import Hero from "@/components/Hero/Home/Hero";
 
 
 export const metadata: Metadata = {
@@ -10,7 +12,9 @@ export const metadata: Metadata = {
 function Home() {
   return (
     <main>
+      <Hero image_url={"/assets/new-york-skyline-black-and-white-lucynakoch.jpg"} />
       <Slider />
+      <HomeAboutCardUI image_url={"/assets/group_image.png"} />
     </main>
   );
 }
