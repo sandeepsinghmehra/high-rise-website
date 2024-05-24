@@ -3,7 +3,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, useTheme } from "@mui/material";
 import WestIcon from '@mui/icons-material/West';
 import Image from "next/image";
 
@@ -27,6 +27,7 @@ const responsive = {
 
 
 const Slider = () => {
+    const theme:any = useTheme();
     const sliderImageUrl = [
         {url: "/assets/Slider/image_1.jpg"},
         {url: "/assets/Slider/image_2.jpg"},
@@ -45,7 +46,7 @@ const Slider = () => {
         <IconButton
             onClick={onClick}
             sx={{ 
-                color: 'red',
+                color: theme.palette.mode === 'light' ? "#000": "#fff",
                 background: "transparent",
                 border: 0,
                 position: 'absolute',
@@ -61,7 +62,7 @@ const Slider = () => {
             sx={{
                 transform: 'rotate(180deg)', // Rotates the icon by 45 degrees
                 transition: 'transform 0.3s ease-in-out', // Smooth transition
-                color: 'red',
+                color: theme.palette.mode === 'light' ? "#000": "#fff",
                 background: "transparent",
                 border: 0,
                 position: 'absolute',
@@ -70,11 +71,11 @@ const Slider = () => {
             }}
             onClick={onClick}
         >
-                <WestIcon fontSize="small" />
-            </IconButton>
+            <WestIcon fontSize="small" />
+        </IconButton>
     );
     return (
-        <Box sx={{px: 5}}>
+        <Box sx={{px: {xs: 1, md: 5}}}>
             <Carousel
                 responsive={responsive}
                 autoPlay={false}
@@ -88,9 +89,14 @@ const Slider = () => {
             >
             {sliderImageUrl.map((item, index) => {
                 return (
-                    <Box sx={{overflow: "hidden", padding: "2rem 0"}} key={index}>
-                        <Image 
-                            style={{width: '100%', height: '230px'}} 
+                    <Box 
+                        sx={{
+                            overflow: "hidden", 
+                            padding: {xs: "2rem 0",md:"2rem 0"}, 
+                        }} 
+                        key={index}
+                    >
+                        <Image  
                             src={item.url} 
                             alt={`slider-${item.url}`} 
                             width={350}
