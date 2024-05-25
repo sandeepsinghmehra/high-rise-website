@@ -18,8 +18,8 @@ export default function Hero(props) {
         <Typography
             color="inherit"
             align="center"
-            variant="h5"
-            sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}
+            variant="caption"
+            sx={{ mb: 4, mt: { xs: 4, sm: 10 }, fontSize: '30px' }}
         >
             Serving the Metropolitan area since 2018
         </Typography>
