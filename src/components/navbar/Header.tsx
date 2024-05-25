@@ -17,7 +17,7 @@ const CustomLink = styled(Link)(({ theme }) => ({
 
 const Logo = styled(Image)({
   height: 80,
-  width: 120,
+  width: 80,
 });
 
 export function  Header(){

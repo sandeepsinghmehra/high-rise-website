@@ -91,20 +91,31 @@ const Slider = () => {
             >
             {sliderImageUrl.map((item, index) => {
                 return (
-                    <Box 
-                        sx={{
-                            overflow: "hidden", 
-                            padding: {xs: "2rem 0",md:"2rem 0"}, 
-                        }} 
-                        key={index}
-                    >
-                        <Image  
-                            src={item.url} 
-                            alt={`slider-${item.url}`} 
-                            width={350}
-                            height={230}
-                            priority
-                        />
+                    <Box key={index}  sx={{ 
+                        padding: {xs: "2rem 0",md:"2rem 0"}, 
+                        height: 300
+                    }} >
+                        <Box 
+                            sx={{
+                                overflow: "hidden", 
+                                padding: {xs: "2rem 0",md:"2rem 0"}, 
+                                height: 230,
+                                position: 'relative'
+                            }} 
+                        >
+                            <Image  
+                                src={item.url} 
+                                alt={`slider-${item.url}`} 
+                                // width={350}
+                                // height={230}
+                                // priority
+                                fill
+                                style={{
+                                    width: '100%',
+                                    objectFit: 'cover', // cover, contain
+                                }}
+                            />
+                        </Box>
                     </Box>
                 );
             })}
