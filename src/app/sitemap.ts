@@ -1,34 +1,34 @@
+import { BASE_URL } from '@/config/constants'
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://high-rise-website.vercel.app";
     return [
         {
-            url: baseUrl,
+            url: BASE_URL,
             lastModified: new Date(),
             //   changeFrequency: 'yearly',
             //   priority: 1,
         },
         {
-            url: `${baseUrl}/about`,
+            url: `${BASE_URL}/about`,
             lastModified: new Date(),
             //   changeFrequency: 'monthly',
             //   priority: 0.8,
         },
         {
-            url: `${baseUrl}/careers`,
+            url: `${BASE_URL}/careers`,
             lastModified: new Date(),
         },
         {
-            url: `${baseUrl}/services`,
+            url: `${BASE_URL}/services`,
             lastModified: new Date(),
         },
         {
-            url: `${baseUrl}/projects`,
+            url: `${BASE_URL}/projects`,
             lastModified: new Date(),
         },
         {
-            url: `${baseUrl}/research`,
+            url: `${BASE_URL}/research`,
             lastModified: new Date(),
         },
     ]

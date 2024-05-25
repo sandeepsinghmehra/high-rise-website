@@ -1,7 +1,7 @@
+import { BASE_URL } from '@/config/constants'
 import { MetadataRoute } from 'next'
  
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = "https://high-rise-website.vercel.app";
 
     return {
             rules: {
@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
                 allow: '/',
                 disallow: '/private/',
             },
-            sitemap: `${baseUrl}/sitemap.xml`,
+            sitemap: `${BASE_URL}/sitemap.xml`,
         }
 }
 
