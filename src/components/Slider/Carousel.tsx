@@ -53,6 +53,7 @@ const Slider = () => {
                 bottom: 0,
                 left: 0,
             }}
+            title="left-side-arrow"
         >
             <WestIcon fontSize="small" />
         </IconButton>
@@ -69,6 +70,7 @@ const Slider = () => {
                 bottom: 0,
                 left: 40,
             }}
+            title="left-side-arrow"
             onClick={onClick}
         >
             <WestIcon fontSize="small" />

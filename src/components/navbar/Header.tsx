@@ -67,14 +67,6 @@ export function  Header(){
             sx={{ bgcolor: theme.palette.mode === 'light' ? "#fff": "#000" }}
           >
             <Toolbar>
-              {/* <Logo 
-                src={companyLogo} 
-                alt="HighRise" sx={{
-                  height: {xs: 50, md: 80},
-                  width: {xs: 60, md: 100},
-                }} 
-                // onClick={() => navigate("/")} 
-              /> */}
               <Box>
                 <Link href={'/'}>
                   <Logo
@@ -175,6 +167,7 @@ const AllMenus = (data) => {
 
                 <IconButton 
                   onClick={toggleTheme}
+                  title="theme-button-icons"
                 >
                   { theme.palette.mode === 'light' ?<DarkModeRounded /> : <LightModeOutlined /> }
                 </IconButton>
@@ -266,7 +259,8 @@ const NavItem = ({ title, active, href }) => {
           sx={{
             textDecoration: active ? 'underline' : 'none', 
             textUnderlineOffset: active ? '5px': 'none',
-            cursor: `url(${"/assets/hemmar4.png"}), pointer`,
+            // cursor: `url(${"/assets/hemmar4.png"}), pointer`,
+            cursor: `url(${"/bulldojar1.jpg"}), pointer`,
           }}  
         >{title}</CustomLink>   
     )
