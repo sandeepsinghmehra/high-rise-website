@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 const ThemeProvider = dynamic(()=>import("@/components/theme/ThemeProvider"), {ssr: false,});
 import { Header } from "@/components/navbar/Header";
 import { Footer } from "@/components/footer/Footer";
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"], display: 'swap' });
 
@@ -69,11 +70,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <ThemeProvider>
-        <Header />
-        {children}
-        <Footer />
-      </ThemeProvider>
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Analytics />
+          <Footer />
+        </ThemeProvider>
         </body>
     </html>
   );
