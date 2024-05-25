@@ -16,10 +16,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image"
   },
-  // openGraph: {
-
-  // }
-  // icons: 'favicon.ico',
+  keywords: ['Construction Management', 'Jersey City', 'Construction, Buildings and SkyScrapers', 'High Rise Consturction Solution', 'High Rise', 'Junaid Qazi', 'Construction Jersey City', 'High Rise Consturction'],
+  authors: [
+    { name: 'Sandeep Singh Mehra', url: 'https://github.com/sandeepsinghmehra' }
+  ], 
+  openGraph: {
+    title: 'Highrise Construction Solutions',
+    description: 'We are a construction company with over 25 years of experience in the Construction Management and General Contracting domain specializing in building skyscrapers. Our extensive experience, professionally skilled and eager staff and our unwavering commitment to excellence enables us to deliver high quality projects on time and monitoring budget within set constraints.',
+  },
   icons: {
     icon: [
       {
