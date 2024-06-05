@@ -5,10 +5,12 @@ const ThemeProvider = dynamic(()=>import("@/components/theme/ThemeProvider"), {s
 import { Header } from "@/components/navbar/Header";
 import { Footer } from "@/components/footer/Footer";
 import { Analytics } from '@vercel/analytics/react';
+import { BASE_URL } from "@/config/constants";
 
 const inter = Inter({ subsets: ["latin"], display: 'swap' });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
     template: '%s | Highrise Construction Solutions',
     default: "Highrise Construction Solutions", // a default is required when creating a template

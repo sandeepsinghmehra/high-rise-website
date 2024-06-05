@@ -5,8 +5,10 @@ import { styled } from '@mui/material/styles';
 
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import {motion} from 'framer-motion';
+import { fadeInUpAnimation } from '@/components/Farmer-motion/Variants';
 
-const HeroLayoutRoot = styled('section')(({ theme }) => ({
+const HeroLayoutRoot = styled(motion.section)(({ theme }) => ({
   color: theme.palette.common.white,
   position: 'relative',
   display: 'flex',
@@ -33,7 +35,12 @@ function HeroLayout(props) {
   const { sxBackground, children } = props;
 
   return (
-    <HeroLayoutRoot>
+    <HeroLayoutRoot
+      initial={{ opacity: 0 }}
+      animate={"show"}
+      variants={fadeInUpAnimation}
+      style={{ position: 'relative', display: 'flex', alignItems: 'center' }}
+    >
       <Container
         sx={{
           mt: 3,
