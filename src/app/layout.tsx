@@ -60,8 +60,9 @@ export const metadata: Metadata = {
   },
 
   manifest: "/favicon/site.webmanifest",
+  
 };
-
+{/* <meta name="google-adsense-account" content="ca-pub-7291468257656404"></meta> */}
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -69,6 +70,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-7291468257656404" />
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7291468257656404"
+          crossOrigin="anonymous"
+        >
+        </script>
+      </head>
       <body className={inter.className}>
         <ThemeProvider>
           <Header />
